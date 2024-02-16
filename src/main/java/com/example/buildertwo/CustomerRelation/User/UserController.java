@@ -23,19 +23,22 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+
     @GetMapping("/getUsers")
     public List<User> getUsers() {
         return userService.getAllUsers();
     }
 
+
     @PostMapping("/saveUser")
-    public User createUser(User user) {
+    public User createUser( User user) {
         return userService.createUser(user);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable String id) {
-        Optional<User> optionalUser = userService.getUserById(id);
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<User> getUserById(@PathVariable String userId) {
+        Optional<User> optionalUser = userService.getUserById(userId);
 
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
