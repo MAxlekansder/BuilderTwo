@@ -12,8 +12,7 @@ import java.util.Date;
 
 public class User {
 
-    @Id
-    private String userId;
+    @Id private String userId;
     @NotNull private String name;
     private String dateOfBirth; //optional
     private String telephoneNumber;
