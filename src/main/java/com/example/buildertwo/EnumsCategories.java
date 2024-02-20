@@ -21,4 +21,16 @@ public class EnumsCategories {
         LOGISTICALCOORDINATOR,
         ANALYST
     }
+
+    public enum orderType {
+        CUSTOMERORDER,
+        BULKORDER,
+        EXTERNALORDER,
+        MANIFACTURINGORDER,
+        DIRECTORDER,
+        DELIVERYORDER,
+        DISTRIBUTIONORDER,
+        PURCHASEORDER,
+        INVOICEORDER
+    }
 }

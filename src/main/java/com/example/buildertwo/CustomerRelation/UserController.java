@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation.User;
+package com.example.buildertwo.CustomerRelation;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/saveUser")
+    @PostMapping("/createUser")
     public User createUser( User user) {
         return userService.createUser(user);
     }
@@ -47,30 +47,4 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-
-    /*
-
-    @GetMapping("/getUsers")
-    public List<User> getUsers() {
-        return userRepository.findAll();
-
-    }
-
-
-    @PostMapping("/saveUser")
-    public User createUser( User user) {
-        return userRepository.save(user);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable String id) {
-        Optional<User> optionalUser = userRepository.findById(id);
-
-        if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
-            return ResponseEntity.ok(user);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    } */
 }

@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation.User;
+package com.example.buildertwo.CustomerRelation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +27,5 @@ public class UserService {
     public Optional<User> getUserById(String id) {
         return userRepository.findById(id);
     }
-
 
 }

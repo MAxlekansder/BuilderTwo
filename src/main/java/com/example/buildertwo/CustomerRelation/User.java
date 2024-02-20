@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation.User;
+package com.example.buildertwo.CustomerRelation;
 import com.example.buildertwo.EnumsCategories;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document (collection = "User")
-/*public record User(@MongoId String id, String name, LocalDate dateOfBirth, int telephoneNumber, String email, typeOfStatus status) {} */
+
 public class User {
 
     @Id
@@ -18,20 +18,27 @@ public class User {
     private String dateOfBirth; //optional
     private String telephoneNumber;
     private String email;
-    @JsonEnumDefaultValue
-    private EnumsCategories.userStatus userStatus;
-
+    @JsonEnumDefaultValue private EnumsCategories.userStatus userStatus;
+    private boolean isActive;
 
     private final EnumsCategories.userStatus enumsCategories;
 
 
-    public User(String id, String name, String dateOfBirth, String telephoneNumber, String email, EnumsCategories.userStatus enumsCategories) {
-        this.userId = id;
+    public User(String userId, String name, String dateOfBirth, String telephoneNumber, String email, EnumsCategories.userStatus enumsCategories) {
+        this.userId = userId;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.telephoneNumber = telephoneNumber;
         this.email = email;
         this.enumsCategories = enumsCategories;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 
     public String getUserId() {

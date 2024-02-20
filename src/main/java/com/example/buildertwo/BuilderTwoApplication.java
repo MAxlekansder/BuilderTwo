@@ -1,6 +1,6 @@
 package com.example.buildertwo;
 
-import com.example.buildertwo.CustomerRelation.User.UserService;
+import com.example.buildertwo.CustomerRelation.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RestController;
