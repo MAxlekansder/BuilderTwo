@@ -33,4 +33,8 @@ public class EnumsCategories {
         PURCHASE_ORDER,
         INVOICE_ORDER
     }
+
+    public enum customerType {
+        BULK_CUSTOMER
+    }
 }
