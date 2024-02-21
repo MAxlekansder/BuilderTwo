@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation;
+package com.example.buildertwo.CustomerRelation.User;
 import com.example.buildertwo.EnumsCategories;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document (collection = "User")
-
 public class User {
 
     @Id private String userId;

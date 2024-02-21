@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation;
+package com.example.buildertwo.CustomerRelation.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
