@@ -17,7 +17,7 @@ public class Customer {
 
     @Id
     private String customerId;
-    private int customerNumber;
+    private String customerNumber;
     private String customerName;
     @JsonEnumDefaultValue
     private EnumsCategories.customerType customerType;
@@ -35,8 +35,8 @@ public class Customer {
         this.organisationNumber = organisationNumber;
     }
 
-    public int customerNumberGenerator(EnumsCategories.customerType customerType) {
-        int newCustomerNumber = 1;
+    public String customerNumberGenerator(EnumsCategories.customerType customerType) {
+        String newCustomerNumber = "1";
         return newCustomerNumber;
     }
 }
