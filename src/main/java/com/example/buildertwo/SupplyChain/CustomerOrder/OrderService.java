@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderService {
 
-    @Autowired
-    private MongoTemplate mongoTemplate;
+    private final OrderRepository orderRepository;
 
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     public void saveOrder(OrderGenerator orderGenerator) {
-        mongoTemplate.save(orderGenerator);
+        orderRepository.save(orderGenerator);
     }
 }

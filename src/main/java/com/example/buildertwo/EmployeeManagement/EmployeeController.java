@@ -23,12 +23,12 @@ public class EmployeeController {
     }
 
     @PostMapping("/createEmployee")
-    public Employee createEmployee(Employee employee) {
-        return employeeService.createEmployee(employee);
+    public EmployeeModel createEmployee(EmployeeModel employeeModel) {
+        return employeeService.createEmployee(employeeModel);
     }
 
     @GetMapping("/getEmployees")
-    public List<Employee> getEmployees() {
+    public List<EmployeeModel> getEmployees() {
         return employeeService.getEmployees();
     }
 }

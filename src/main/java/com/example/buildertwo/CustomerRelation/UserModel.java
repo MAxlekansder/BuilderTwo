@@ -1,20 +1,19 @@
 package com.example.buildertwo.CustomerRelation;
 import com.example.buildertwo.EnumsCategories;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
-import org.jetbrains.annotations.NotNull;
+
+import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-import java.util.Date;
-
 @Document (collection = "User")
 
-public class User {
+public class UserModel {
 
     @Id
     private String userId;
-    @NotNull private String name;
+    @NotNull
+    private String name;
     private String dateOfBirth; //optional
     private String telephoneNumber;
     private String email;
@@ -24,7 +23,7 @@ public class User {
     private final EnumsCategories.userStatus enumsCategories;
 
 
-    public User(String userId, String name, String dateOfBirth, String telephoneNumber, String email, EnumsCategories.userStatus enumsCategories) {
+    public UserModel(String userId, String name, String dateOfBirth, String telephoneNumber, String email, EnumsCategories.userStatus enumsCategories) {
         this.userId = userId;
         this.name = name;
         this.dateOfBirth = dateOfBirth;

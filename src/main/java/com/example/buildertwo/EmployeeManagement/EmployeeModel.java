@@ -5,8 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document (collection = "Employee")
-public class Employee {
+@Document (collection = "EmployeeModel")
+public class EmployeeModel {
 
     @Id
     private String employeeId;
@@ -20,7 +20,7 @@ public class Employee {
     private final EnumsCategories.employeeStatus enumsCategories;
 
 
-    public Employee(String employeeId, String name, Date dateOfBirth, String email, String telephoneNumber, EnumsCategories.employeeStatus enumsCategories) {
+    public EmployeeModel(String employeeId, String name, Date dateOfBirth, String email, String telephoneNumber, EnumsCategories.employeeStatus enumsCategories) {
         this.employeeId = employeeId;
         this.name = name;
         this.dateOfBirth = dateOfBirth;

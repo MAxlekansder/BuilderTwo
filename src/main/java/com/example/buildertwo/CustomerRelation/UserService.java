@@ -1,6 +1,5 @@
 package com.example.buildertwo.CustomerRelation;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,20 +10,20 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    @Autowired
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    public List<User> getAllUsers() {
+    public List<UserModel> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User createUser(User user) {
-        return userRepository.save(user);
+    public UserModel createUser(UserModel userModel) {
+        return userRepository.save(userModel);
     }
 
-    public Optional<User> getUserById(String id) {
+    public Optional<UserModel> getUserById(String id) {
         return userRepository.findById(id);
     }
 

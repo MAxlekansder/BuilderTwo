@@ -8,9 +8,10 @@ import java.util.Optional;
 
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String> {
-    Optional<User> findById(String userId);
+public interface UserRepository extends MongoRepository<UserModel, String> {
 
-    List<User> findAll();
+
+    Optional<UserModel> findById(String userId);
+    List<UserModel> findAll();
 
 }

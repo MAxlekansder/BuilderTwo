@@ -25,24 +25,24 @@ public class UserController {
 
 
     @GetMapping("/getUsers")
-    public List<User> getUsers() {
+    public List<UserModel> getUsers() {
         return userService.getAllUsers();
     }
 
 
     @PostMapping("/createUser")
-    public User createUser( User user) {
-        return userService.createUser(user);
+    public UserModel createUser(UserModel userModel) {
+        return userService.createUser(userModel);
     }
 
 
     @GetMapping("/{userId}")
-    public ResponseEntity<User> getUserById(@PathVariable String userId) {
-        Optional<User> optionalUser = userService.getUserById(userId);
+    public ResponseEntity<UserModel> getUserById(@PathVariable String userId) {
+        Optional<UserModel> optionalUser = userService.getUserById(userId);
 
         if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
-            return ResponseEntity.ok(user);
+            UserModel userModel = optionalUser.get();
+            return ResponseEntity.ok(userModel);
         } else {
             return ResponseEntity.notFound().build();
         }

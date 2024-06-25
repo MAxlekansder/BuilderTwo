@@ -1,6 +1,5 @@
 package com.example.buildertwo.EmployeeManagement;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,16 +10,16 @@ public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
 
-    @Autowired
+
     public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
-    public Employee createEmployee(Employee employee) {
-        return employeeRepository.save(employee);
+    public EmployeeModel createEmployee(EmployeeModel employeeModel) {
+        return employeeRepository.save(employeeModel);
     }
 
-    public List<Employee> getEmployees() {
+    public List<EmployeeModel> getEmployees() {
         return employeeRepository.findAll();
     }
 }
