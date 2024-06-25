@@ -9,6 +9,10 @@ public class ProductModel {
 
     @Id
     private String id;
+    private String productName;
 
+    private String unitOfMeasure;
+    private int productAmount;
+    private boolean isProductActive;
 
 }
