@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation;
+package com.example.buildertwo.CustomerRelation.User;
 import com.example.buildertwo.EnumsCategories;
 import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
 
@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+<<<<<<<< HEAD:src/main/java/com/example/buildertwo/CustomerRelation/UserModel.java
 @Document (collection = "User")
 
 public class UserModel {
@@ -14,6 +15,14 @@ public class UserModel {
     private String userId;
     @NotNull
     private String name;
+========
+
+@Document (collection = "User")
+public class User {
+
+    @Id private String userId;
+    @NotNull private String name;
+>>>>>>>> c339526e9113f030daa346c5f6c922eca4207adf:src/main/java/com/example/buildertwo/CustomerRelation/User/User.java
     private String dateOfBirth; //optional
     private String telephoneNumber;
     private String email;
