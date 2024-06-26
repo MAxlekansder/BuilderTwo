@@ -13,12 +13,11 @@ import java.util.List;
 @RequestMapping("/employee")
 public class EmployeeController {
 
-    private final EmployeeRepository employeeRepository;
+
     private final EmployeeService employeeService;
 
-    @Autowired
+
     public EmployeeController(EmployeeRepository employeeRepository, EmployeeService employeeService) {
-        this.employeeRepository = employeeRepository;
         this.employeeService = employeeService;
     }
 
@@ -30,5 +29,10 @@ public class EmployeeController {
     @GetMapping("/getEmployees")
     public List<EmployeeModel> getEmployees() {
         return employeeService.getEmployees();
+    }
+
+    @GetMapping("/hello")
+    public String greetEmployee() {
+        return "hello employee";
     }
 }

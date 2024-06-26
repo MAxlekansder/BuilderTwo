@@ -9,6 +9,7 @@ public class EnumsCategories {
         SUPERUSER,
         CAMPAIGNCUSTOMER,
         SPECIALCUSTOMER,
+        BULKCUSTOMER,
     }
 
     public enum employeeStatus {

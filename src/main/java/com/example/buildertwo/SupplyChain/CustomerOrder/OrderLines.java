@@ -5,8 +5,9 @@ public class OrderLines extends OrderHead {
     private int orderLine;
     private String itemName;
     private String itemNumber;
-    private String quantity;
-    private String salesPrice;
-    private String netPrice;
+    private long quantity;
+    private long salesPrice;
+    private long netPrice;
+    private int discount;
 
 }

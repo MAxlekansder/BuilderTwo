@@ -11,23 +11,24 @@ public class EmployeeModel {
     @Id
     private String employeeId;
     private String name;
+    private String password;
     private Date dateOfBirth;
     private String email;
     private String telephoneNumber;
     private EnumsCategories.employeeStatus employeeStatus;
 
 
-    private final EnumsCategories.employeeStatus enumsCategories;
-
-
-    public EmployeeModel(String employeeId, String name, Date dateOfBirth, String email, String telephoneNumber, EnumsCategories.employeeStatus enumsCategories) {
+    public EmployeeModel(String employeeId, String name, String password, Date dateOfBirth, String email, String telephoneNumber) {
         this.employeeId = employeeId;
         this.name = name;
+        this.password = password;
         this.dateOfBirth = dateOfBirth;
         this.email = email;
         this.telephoneNumber = telephoneNumber;
-        this.enumsCategories = enumsCategories;
     }
+
+    public EmployeeModel(){}
+
 
     public String getEmployeeId() {
         return employeeId;
@@ -55,6 +56,14 @@ public class EmployeeModel {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setEmail(String email) {
