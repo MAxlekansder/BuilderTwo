@@ -7,8 +7,14 @@ public class OrderLines {
     private String itemName;
     private String itemNumber;
     private long quantity;
+<<<<<<< HEAD
+    private long salesPrice;
+    private long netPrice;
+    private int discount;
+=======
     private double salesPrice;
     private double netPrice;
+>>>>>>> master
 
 
     public OrderLines( int orderLine, String itemName, String itemNumber, long quantity, double salesPrice, double netPrice) {

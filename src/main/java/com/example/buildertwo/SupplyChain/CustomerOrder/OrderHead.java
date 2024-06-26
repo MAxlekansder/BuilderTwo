@@ -8,5 +8,7 @@ public class OrderHead {
     private int orderStatus;
     private double totalAmount;
     private long totalVolume;
+    private long totalPrice;
+    private boolean isCampaignOrder;
 
 }
