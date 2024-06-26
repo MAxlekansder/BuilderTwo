@@ -1,4 +1,4 @@
-package com.example.buildertwo.CustomerRelation;
+package com.example.buildertwo.CustomerRelation.User;
 
 
 import org.slf4j.Logger;

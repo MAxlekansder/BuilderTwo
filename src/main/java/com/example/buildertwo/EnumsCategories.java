@@ -24,14 +24,18 @@ public class EnumsCategories {
     }
 
     public enum orderType {
-        CUSTOMERORDER,
-        BULKORDER,
-        EXTERNALORDER,
-        MANIFACTURINGORDER,
-        DIRECTORDER,
-        DELIVERYORDER,
-        DISTRIBUTIONORDER,
-        PURCHASEORDER,
-        INVOICEORDER
+        CUSTOMER_ORDER,
+        BULK_ORDER,
+        EXTERNAL_ORDER,
+        MANIFACTURING_ORDER,
+        DIRECT_ORDER,
+        DELIVERY_ORDER,
+        DISTRIBUTION_ORDER,
+        PURCHASE_ORDER,
+        INVOICE_ORDER
+    }
+
+    public enum customerType {
+        BULK_CUSTOMER
     }
 }
